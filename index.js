@@ -1,8 +1,10 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
+const fs = require('fs');
 
 // TODO: Create an array of questions for user input
-const questions = [
+const promptQuestions = () => {
+    return inquirer.prompt([
     { // Title
         type: 'input',
         name: 'title',
@@ -73,7 +75,8 @@ const questions = [
         name: 'github',
         message: 'What is your email address that users may contact you through with any questions?'
     }
-];
+]);
+};
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {}
