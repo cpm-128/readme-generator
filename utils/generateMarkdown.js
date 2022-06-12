@@ -26,7 +26,7 @@ function generateMarkdown(data) {
 
   ## License
   ${data.license} License
-  Copyright (c) [2022] [${data.name}]
+  Copyright (c) [2022] [${data.name}] <br>
   For full license permissions, <a href="https://choosealicense.com/licenses/${data.license}">click here</a>.
 
   ## Contributing Credits

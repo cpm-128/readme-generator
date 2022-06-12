@@ -43,10 +43,10 @@ const promptQuestions = () => {
         message: 'Provide instructions and examples for use. (Hitting enter will submit.)'
     },
     { // License
-        type: 'checkbox',
+        type: 'list',
         name: 'license',
         message: 'Which license type would you like to add to your project? (If you need help choosing a license, refer to https://choosealicense.com/)',
-        choices: ['MIT' , 'GNU General Public License v3.0' , 'Apache License 2.0' , 'ISC License'],
+        choices: ['mit' , 'gpl 2.0' , 'apache 2.0' , 'isc'],
         validate: licenseInput => {
             if (licenseInput) {
                 return true;
