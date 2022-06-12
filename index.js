@@ -1,6 +1,7 @@
 // TODO: Include packages needed for this application
 const inquirer = require('inquirer');
 const fs = require('fs');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 
 // TODO: Create an array of questions for user input
 const promptQuestions = () => {
@@ -39,7 +40,7 @@ const promptQuestions = () => {
     { // Usage
         type: 'input',
         name: 'usage',
-        massage: 'Provide instructions and examples for use. (Hitting enter will submit.)'
+        message: 'Provide instructions and examples for use. (Hitting enter will submit.)'
     },
     { // License
         type: 'checkbox',
@@ -50,7 +51,7 @@ const promptQuestions = () => {
     { // Contributing Credits
         type: 'input',
         name: 'credits',
-        message: 'If you had any collaborats, please their GitHub names separated by a comma.'
+        message: 'If you had any collaborators, please their GitHub names separated by a comma.'
     },
     { // Tests
         type: 'input',
@@ -72,17 +73,43 @@ const promptQuestions = () => {
     },
     { // Questions, email
         name: 'input',
-        name: 'github',
+        name: 'email',
         message: 'What is your email address that users may contact you through with any questions?'
     }
-]);
+])
 };
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+// TODO: Create a function to write README file using fileSystem
+const writeFile = data => {
+    fs.writeFile('generated_README.md', data, err => {
+        // if there is an error
+        if (err) {
+            console.log(err);
+            return;
+        // when the README has been created
+        } else {
+            console.log("Your README has been successfully generated. It is saved as generated_README.md in the root directory.")
+        }
+    })
+};
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    // ask questions
+    promptQuestions()
+        // get answers
+        .then(answers => {
+            return generateMarkdown(answers);
+        })
+        // using data to display on page
+        .then(data => {
+            return writeFile(data);
+        })
+        // error handling
+        .catch(err => {
+            console.log(err)
+        })
+};
 
 // Function call to initialize app
 init();
