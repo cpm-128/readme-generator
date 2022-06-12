@@ -46,7 +46,15 @@ const promptQuestions = () => {
         type: 'checkbox',
         name: 'license',
         message: 'Which license type would you like to add to your project? (If you need help choosing a license, refer to https://choosealicense.com/)',
-        choices: ['MIT' , 'GNU General Public License v3.0' , 'Apache License 2.0' , 'ISC License']
+        choices: ['MIT' , 'GNU General Public License v3.0' , 'Apache License 2.0' , 'ISC License'],
+        validate: licenseInput => {
+            if (licenseInput) {
+                return true;
+            } else {
+                console.log('Enter the appropriate license to continue.');
+                return false;
+            }
+        }
     },
     { // Contributing Credits
         type: 'input',
@@ -75,6 +83,11 @@ const promptQuestions = () => {
         name: 'input',
         name: 'email',
         message: 'What is your email address that users may contact you through with any questions?'
+    },
+    { // Full name
+        name: 'input',
+        name: 'name',
+        message: 'What is your full name?'
     }
 ])
 };
