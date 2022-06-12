@@ -1,4 +1,5 @@
 # Professional README Generator
+<a href="#license"><img src="https://img.shields.io/badge/license-${data.license}-informational"></img></a>
 
 ## Description
 A comand-line application that dynamically generates a professional README.md file from a user's input.
@@ -14,7 +15,6 @@ SO THAT I can quickly create a professional README for a new project
 - <a href="#usage">Usage</a>
 - <a href="#credits">Credits</a>
 - <a href="#license">License</a>
-- <a href="#badges">Badges</a>
 
 
 ## Acceptance Criteria
@@ -51,9 +51,11 @@ THEN this is added to the section of the README entitled Questions, with instruc
 WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 ## Installation
-<!-- What are the steps required to install your project? Provide a step-by-step description of how to get the development environment running. Download it yourself, any installs?, command line to invoke -->
-The application is invoked by using the following command: _node index.js_
+- Clone to repository from GitHub locally.
+- Open the repo, in the root directory, in VS Code.
+- The application is invoked by using the following command: _node index.js_
 ## Usage
+To quickly generate professional and complete README files for a repository.
 
 ### Screencapture
 
@@ -84,5 +86,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
-## Badges
