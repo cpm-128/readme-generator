@@ -1,5 +1,5 @@
 # Professional README Generator
-<a href="#license"><img src="https://img.shields.io/badge/license-${data.license}-informational"></img></a>
+<a href="#license"><img src="https://img.shields.io/badge/license-mit-informational"></img></a>
 
 ## Description
 A comand-line application that dynamically generates a professional README.md file from a user's input.
@@ -58,8 +58,14 @@ THEN I am taken to the corresponding section of the README
 To quickly generate professional and complete README files for a repository.
 
 ### Screencapture
+1. Terminal
+<img src="./images/README-generator_terminal.png">
+
+2. Generated File
+<img src="./images/README-generator_file.png">
 
 ### Video Walk Through
+<a href="https://drive.google.com/file/d/1hvIpOihKkD4UPbYJUsXNrN3be-A1KiOb/view?usp=sharing">Watch here.</a>
 
 ## Credits
 <a href="https://github.com/coding-boot-camp/potential-enigma">UNC Coding Bootcamp Starter Code</a>
